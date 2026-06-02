@@ -26,7 +26,7 @@ function ContactPage() {
         description="Reach our curators directly. Most briefs receive a thoughtful response within two working hours."
       />
 
-      <section className="pb-24 md:pb-32">
+      <section className="pb-28 md:pb-40">
         <div className="mx-auto max-w-7xl px-5">
           <div className="relative overflow-hidden rounded-[2.5rem] shadow-luxe">
             <div className="absolute inset-0 -z-10 gradient-plum" />
@@ -37,7 +37,7 @@ function ContactPage() {
                 <h2 className="font-display text-3xl md:text-4xl text-balance">
                   Talk to a curator
                 </h2>
-                <p className="mt-5 max-w-lg text-white/75 leading-relaxed">
+                <p className="mt-5 max-w-lg text-white/90 leading-relaxed">
                   Whether you're planning a 25-piece executive set or a 5,000-piece year-end programme, we'll come back with a thoughtful proposal — never a templated quote.
                 </p>
                 <div className="mt-10 space-y-4">
@@ -58,7 +58,7 @@ function ContactPage() {
 
               <div className="glass-dark rounded-[2rem] p-8 md:p-10 shadow-luxe">
                 <h3 className="font-display text-2xl text-white">Start your brief</h3>
-                <p className="mt-1 text-sm text-white/65">Or skip the form and message a curator on WhatsApp.</p>
+                <p className="mt-1 text-sm text-white/85">Or skip the form and message a curator on WhatsApp.</p>
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();

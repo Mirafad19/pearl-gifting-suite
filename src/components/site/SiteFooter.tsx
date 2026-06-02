@@ -3,40 +3,44 @@ import { LOGO_URL, NAV_LINKS } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[var(--plum-deep)] py-16 text-white/70">
+    <footer className="bg-[var(--plum-deep)] py-18 md:py-24 text-white/85">
       <div className="mx-auto max-w-7xl px-5">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-14 md:gap-16 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={LOGO_URL} alt="Pearl Gifts" className="h-11 w-11 rounded-full bg-white object-contain p-1" />
+              <img src={LOGO_URL} alt="Pearl Gifts" className="h-12 w-12 rounded-full bg-white object-contain p-1.5" />
               <span className="font-display text-2xl text-white">
                 Pearl <span className="text-gradient-gold">Gifts</span>
               </span>
             </div>
-            <p className="mt-5 max-w-md text-sm leading-relaxed">
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-white/90">
               A Lagos-based luxury gifting atelier crafting bespoke experiences for organizations that give with intention.
             </p>
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Explore</p>
-            <ul className="mt-5 space-y-2 text-sm">
+            <ul className="mt-6 space-y-3 text-sm">
               {NAV_LINKS.map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to} className="hover:text-white">{l.label}</Link>
+                  <Link to={l.to} className="transition hover:text-white">{l.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Contact</p>
-            <ul className="mt-5 space-y-2 text-sm">
-              <li>hello@pearlgifts.co</li>
-              <li>+234 800 000 0000</li>
+            <ul className="mt-6 space-y-3 text-sm">
+              <li>
+                <a href="mailto:hello@pearlgifts.co" className="transition hover:text-white">hello@pearlgifts.co</a>
+              </li>
+              <li>
+                <a href="tel:+2348000000000" className="transition hover:text-white">+234 800 000 0000</a>
+              </li>
               <li>Victoria Island, Lagos</li>
             </ul>
           </div>
         </div>
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs">
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-8 text-xs text-white/70">
           <p>© {new Date().getFullYear()} Pearl Gifts Atelier. All rights reserved.</p>
           <p>Crafted in Lagos · Delivered with care.</p>
         </div>

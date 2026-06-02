@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative overflow-hidden pt-32 pb-24 md:pt-44 md:pb-32">
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full bg-[var(--plum)]/15 blur-3xl" />
         <div className="absolute top-40 -right-40 h-[520px] w-[520px] rounded-full bg-[var(--gold)]/20 blur-3xl" />
@@ -31,14 +31,14 @@ function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
             A Lagos luxury gifting atelier
           </span>
-          <h1 className="mt-7 font-display text-[clamp(2.5rem,6vw,4.75rem)] leading-[1.02] text-[var(--plum-deep)] text-balance">
+          <h1 className="mt-8 font-display text-[clamp(2.5rem,6vw,4.75rem)] leading-[1.02] text-[var(--plum-deep)] text-balance">
             Thoughtfully <em className="not-italic text-gradient-gold">Crafted</em> Gifts
             <br className="hidden sm:block" /> For Every Occasion
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-[var(--ink)]/70">
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--ink)]">
             From boardroom milestones to founder appreciation hampers — Pearl Gifts designs, sources and hand-finishes bespoke gift experiences that carry the weight of your brand.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-wrap gap-4">
             <Link
               to="/collections"
               className="group inline-flex items-center gap-3 rounded-full gradient-plum px-7 py-4 text-sm tracking-wide text-white shadow-luxe transition hover:opacity-95"
@@ -55,7 +55,7 @@ function Hero() {
               <MessageCircle className="h-4 w-4 text-[var(--plum)]" /> Speak to a Curator
             </a>
           </div>
-          <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-[var(--plum)]/10 pt-8">
+          <dl className="mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-[var(--plum)]/10 pt-10">
             {[
               ["500+", "Brands served"],
               ["50K+", "Gifts delivered"],
@@ -93,16 +93,16 @@ function Hero() {
 function BrandStrip() {
   const brands = ["DANGOTE", "ACCESS", "MTN", "GTCO", "SHELL", "UNILEVER", "FLUTTERWAVE", "STANBIC"];
   return (
-    <section className="border-y border-[var(--plum)]/10 bg-white/60 py-10">
+    <section className="border-y border-[var(--plum)]/10 bg-white/60 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-5">
-        <p className="text-center text-xs uppercase tracking-[0.3em] text-[var(--ink)]/50">
+        <p className="text-center text-xs uppercase tracking-[0.3em] text-[var(--ink)]/65">
           Trusted by organizations across the continent
         </p>
-        <div className="mt-7 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
           {brands.map((b) => (
             <div
               key={b}
-              className="text-center font-display text-xl tracking-[0.18em] text-[var(--plum-deep)]/55 transition hover:text-[var(--plum-deep)]"
+              className="text-center font-display text-xl tracking-[0.18em] text-[var(--plum-deep)]/70 transition hover:text-[var(--plum-deep)]"
             >
               {b}
             </div>
@@ -122,7 +122,7 @@ const PREVIEW_COLLECTIONS = [
 
 function CollectionsPreview() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
@@ -136,7 +136,7 @@ function CollectionsPreview() {
           </Link>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PREVIEW_COLLECTIONS.map((c, i) => (
             <Link to="/collections" key={c.name} className="group block">
               <article className="relative overflow-hidden rounded-3xl bg-card shadow-soft transition hover:shadow-luxe">
@@ -151,7 +151,7 @@ function CollectionsPreview() {
                   </span>
                   <div className="absolute inset-x-5 bottom-5 text-white">
                     <h3 className="font-display text-xl">{c.name}</h3>
-                    <p className="mt-1.5 text-sm text-white/80 line-clamp-2">{c.desc}</p>
+                    <p className="mt-1.5 text-sm text-white/90 line-clamp-2">{c.desc}</p>
                   </div>
                 </div>
               </article>
@@ -165,9 +165,9 @@ function CollectionsPreview() {
 
 function AtelierReel() {
   return (
-    <section className="bg-[var(--cream)] py-24 md:py-32">
+    <section className="bg-[var(--cream)] py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[9/12] overflow-hidden rounded-[2rem] shadow-luxe">
             <video
               src={VIDEO.reel1}
@@ -183,10 +183,10 @@ function AtelierReel() {
             <h2 className="mt-4 font-display text-4xl md:text-5xl text-[var(--plum-deep)] text-balance">
               Where every gift is composed by hand.
             </h2>
-            <p className="mt-6 text-[var(--ink)]/70 leading-relaxed">
+            <p className="mt-6 text-[var(--ink)] leading-relaxed">
               Our Lagos atelier is where moodboards become objects — engraved bamboo, brushed brass, silk-lined boxes and hand-tied ribbon. Watch a glimpse of how an order moves from brief to dispatch.
             </p>
-            <div className="mt-8 grid grid-cols-3 gap-4 max-w-md">
+            <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
               {[
                 ["10+", "Artisans"],
                 ["36", "States covered"],
@@ -194,7 +194,7 @@ function AtelierReel() {
               ].map(([k, v]) => (
                 <div key={v}>
                   <p className="font-display text-2xl text-[var(--plum-deep)]">{k}</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-widest text-[var(--ink)]/55">{v}</p>
+                  <p className="mt-1 text-[11px] uppercase tracking-widest text-[var(--ink)]/70">{v}</p>
                 </div>
               ))}
             </div>
@@ -213,7 +213,7 @@ function AtelierReel() {
 
 function RecognitionTeaser() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5">
         <div className="overflow-hidden rounded-[2.5rem] gradient-plum text-white shadow-luxe">
           <div className="grid lg:grid-cols-2">
@@ -226,7 +226,7 @@ function RecognitionTeaser() {
               <h2 className="mt-4 font-display text-4xl md:text-5xl text-balance">
                 Recognized for craft, consistency and care.
               </h2>
-              <p className="mt-6 max-w-lg text-white/75 leading-relaxed">
+              <p className="mt-6 max-w-lg text-white/90 leading-relaxed">
                 We're honored to be named among the continent's leading gifting houses — a recognition we owe to every team that has trusted us with their most considered moments.
               </p>
               <Link
@@ -243,6 +243,48 @@ function RecognitionTeaser() {
   );
 }
 
+function TestimonialSnippet() {
+  return (
+    <section className="py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-5">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">What Our Clients Say</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl text-[var(--plum-deep)] text-balance">
+            Trusted by teams across the continent.
+          </h2>
+        </div>
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          {[
+            { quote: "Pearl Gifts handled our 2,400-piece year-end gifting flawlessly. Every box arrived perfectly.", author: "Adaeze Okonkwo", role: "Head of People, Fintech Lagos" },
+            { quote: "The craftsmanship is genuinely world-class. Our executives still talk about their gifts months later.", author: "Tunde Bakare", role: "MD, Energy Group" },
+            { quote: "We've moved our entire executive gifting program to Pearl. The service is unmatched.", author: "Ifeoma Eze", role: "Brand Director, Telecom Co." },
+          ].map((t) => (
+            <figure key={t.author} className="rounded-3xl bg-white p-8 shadow-soft transition hover:shadow-luxe">
+              <blockquote className="font-display text-lg leading-snug text-[var(--plum-deep)]">
+                "{t.quote}"
+              </blockquote>
+              <figcaption className="mt-8 flex items-center gap-3 border-t border-[var(--plum)]/10 pt-5">
+                <div className="grid h-10 w-10 place-items-center rounded-full gradient-plum text-[var(--gold)] font-display text-sm font-bold">
+                  {t.author.split(" ").map((n) => n[0]).join("")}
+                </div>
+                <div>
+                  <p className="font-medium text-[var(--ink)]">{t.author}</p>
+                  <p className="text-xs text-[var(--ink)]/70">{t.role}</p>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link to="/recognition" className="inline-flex items-center gap-2 text-sm text-[var(--plum)] hover:text-[var(--plum-deep)]">
+            See more recognition <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Home() {
   return (
     <SiteLayout>
@@ -250,6 +292,7 @@ function Home() {
       <BrandStrip />
       <CollectionsPreview />
       <AtelierReel />
+      <TestimonialSnippet />
       <RecognitionTeaser />
     </SiteLayout>
   );

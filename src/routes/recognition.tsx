@@ -38,7 +38,7 @@ function RecognitionPage() {
         description="We do this work for the relationships behind every gift. The recognition that follows is a kind reflection of the care our clients have trusted us with."
       />
 
-      <section className="pb-24">
+      <section className="pb-28 md:pb-32">
         <div className="mx-auto max-w-7xl px-5">
           <div className="overflow-hidden rounded-[2.5rem] bg-[var(--cream)] shadow-luxe">
             <div className="grid lg:grid-cols-[1.1fr_1fr]">
@@ -52,7 +52,7 @@ function RecognitionPage() {
                 <h2 className="mt-5 font-display text-3xl md:text-4xl text-[var(--plum-deep)] text-balance">
                   Luxury Gifting House of the Year
                 </h2>
-                <p className="mt-5 text-[var(--ink)]/70 leading-relaxed">
+                <p className="mt-5 text-[var(--ink)] leading-relaxed">
                   We were honored to receive this recognition for craft, consistency and the care with which we serve the teams behind each gift. It belongs as much to our artisans and clients as it does to us.
                 </p>
                 <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full gradient-plum px-6 py-3.5 text-sm text-white shadow-soft">
@@ -64,25 +64,25 @@ function RecognitionPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--cream)] py-24 md:py-28">
+      <section className="bg-[var(--cream)] py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Milestones</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl text-[var(--plum-deep)] text-balance">A decade of considered gifting</h2>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
             {MILESTONES.map((m) => (
               <article key={m.year} className="rounded-3xl bg-white p-8 shadow-soft">
                 <p className="font-display text-5xl text-gradient-gold">{m.year}</p>
                 <h3 className="mt-4 font-display text-2xl text-[var(--plum-deep)]">{m.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]/65">{m.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">{m.body}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 md:py-28">
+      <section className="py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Client Voices</span>
@@ -90,7 +90,7 @@ function RecognitionPage() {
               Trusted by the teams behind the names you know.
             </h2>
           </div>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <div className="mt-18 grid gap-7 md:grid-cols-3">
             {TESTIMONIALS.map((t) => (
               <figure key={t.name} className="rounded-3xl bg-white p-8 shadow-soft transition hover:shadow-luxe">
                 <Quote className="h-7 w-7 text-[var(--gold)]" />
@@ -101,7 +101,7 @@ function RecognitionPage() {
                   </div>
                   <div>
                     <p className="font-medium text-[var(--ink)]">{t.name}</p>
-                    <p className="text-xs text-[var(--ink)]/55">{t.role}</p>
+                    <p className="text-xs text-[var(--ink)]/70">{t.role}</p>
                   </div>
                 </figcaption>
               </figure>

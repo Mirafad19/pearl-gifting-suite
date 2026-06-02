@@ -39,7 +39,7 @@ function GalleryPage() {
         description="Every piece below was hand-finished in our Lagos atelier and delivered within the past quarter."
       />
 
-      <section className="pb-24 md:pb-32">
+      <section className="pb-28 md:pb-40">
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid auto-rows-[240px] grid-cols-2 gap-4 md:grid-cols-4 md:auto-rows-[260px]">
             {TILES.map((t, i) => (

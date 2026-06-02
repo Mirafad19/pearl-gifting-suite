@@ -40,7 +40,7 @@ function CorporatePage() {
         description="We partner with HR, marketing and executive teams to design and run gifting programs that strengthen every relationship behind your brand."
       />
 
-      <section className="pb-24">
+      <section className="pb-28 md:pb-32">
         <div className="mx-auto max-w-7xl px-5">
           <div className="overflow-hidden rounded-[2.5rem] bg-[var(--cream)] shadow-soft">
             <div className="grid lg:grid-cols-2">
@@ -66,7 +66,7 @@ function CorporatePage() {
                     "AGM, conference and gala souvenirs",
                     "Quarterly retainers with stocked SKUs",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-[var(--ink)]/80">
+                    <li key={item} className="flex items-start gap-3 text-[var(--ink)]">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold)]" />
                       <span>{item}</span>
                     </li>
@@ -86,7 +86,7 @@ function CorporatePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden py-28 md:py-40">
         <div className="absolute inset-0 -z-10 gradient-plum" />
         <div className="absolute inset-0 -z-10 opacity-[0.06] [background-image:radial-gradient(circle_at_2px_2px,white_1.5px,transparent_0)] [background-size:28px_28px]" />
         <div className="mx-auto max-w-7xl px-5 text-white">
@@ -97,11 +97,11 @@ function CorporatePage() {
                 A gifting partner that treats every detail like the gift itself.
               </h2>
             </div>
-            <p className="text-white/75 leading-relaxed">
+            <p className="text-white/90 leading-relaxed">
               We craft for organizations who understand that a gift carries the weight of every relationship behind it. From a single bespoke hamper to thousands of branded sets, the standard never slips.
             </p>
           </div>
-          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-18 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {WHY.map((w) => (
               <div key={w.title} className="glass-dark rounded-3xl p-7 transition hover:-translate-y-1">
                 <div className="grid h-12 w-12 place-items-center rounded-2xl gradient-gold text-[var(--plum-deep)]">
@@ -115,7 +115,7 @@ function CorporatePage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
+      <section className="py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">How It Works</span>
@@ -123,13 +123,13 @@ function CorporatePage() {
               From brief to unboxing in four refined steps
             </h2>
           </div>
-          <div className="mt-16 grid gap-6 md:grid-cols-4">
+          <div className="mt-18 grid gap-6 md:grid-cols-4">
             {STEPS.map((s, i) => (
               <div key={s.n} className="relative">
                 <div className="rounded-3xl border border-[var(--plum)]/10 bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-luxe">
                   <span className="font-display text-5xl text-gradient-gold">{s.n}</span>
                   <h3 className="mt-5 font-display text-2xl text-[var(--plum-deep)]">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]/65">{s.desc}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">{s.desc}</p>
                 </div>
                 {i < STEPS.length - 1 && (
                   <div className="absolute top-1/2 right-[-14px] hidden h-px w-7 bg-gradient-to-r from-[var(--gold)] to-transparent md:block" />
