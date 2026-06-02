@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RecognitionRouteImport } from './routes/recognition'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as CorporateRouteImport } from './routes/corporate'
 import { Route as CollectionsRouteImport } from './routes/collections'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RecognitionRoute = RecognitionRouteImport.update({
+  id: '/recognition',
+  path: '/recognition',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/collections': typeof CollectionsRoute
   '/corporate': typeof CorporateRoute
   '/gallery': typeof GalleryRoute
+  '/recognition': typeof RecognitionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/collections': typeof CollectionsRoute
   '/corporate': typeof CorporateRoute
   '/gallery': typeof GalleryRoute
+  '/recognition': typeof RecognitionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,20 @@ export interface FileRoutesById {
   '/collections': typeof CollectionsRoute
   '/corporate': typeof CorporateRoute
   '/gallery': typeof GalleryRoute
+  '/recognition': typeof RecognitionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/collections' | '/corporate' | '/gallery'
+  fullPaths: '/' | '/collections' | '/corporate' | '/gallery' | '/recognition'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/collections' | '/corporate' | '/gallery'
-  id: '__root__' | '/' | '/collections' | '/corporate' | '/gallery'
+  to: '/' | '/collections' | '/corporate' | '/gallery' | '/recognition'
+  id:
+    | '__root__'
+    | '/'
+    | '/collections'
+    | '/corporate'
+    | '/gallery'
+    | '/recognition'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +82,18 @@ export interface RootRouteChildren {
   CollectionsRoute: typeof CollectionsRoute
   CorporateRoute: typeof CorporateRoute
   GalleryRoute: typeof GalleryRoute
+  RecognitionRoute: typeof RecognitionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/recognition': {
+      id: '/recognition'
+      path: '/recognition'
+      fullPath: '/recognition'
+      preLoaderRoute: typeof RecognitionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
@@ -107,6 +130,7 @@ const rootRouteChildren: RootRouteChildren = {
   CollectionsRoute: CollectionsRoute,
   CorporateRoute: CorporateRoute,
   GalleryRoute: GalleryRoute,
+  RecognitionRoute: RecognitionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
