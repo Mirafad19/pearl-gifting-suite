@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as RecognitionRouteImport } from './routes/recognition'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as CorporateRouteImport } from './routes/corporate'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CollectionsRouteImport } from './routes/collections'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,11 @@ const CorporateRoute = CorporateRouteImport.update({
   path: '/corporate',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CollectionsRoute = CollectionsRouteImport.update({
   id: '/collections',
   path: '/collections',
@@ -44,6 +50,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/collections': typeof CollectionsRoute
+  '/contact': typeof ContactRoute
   '/corporate': typeof CorporateRoute
   '/gallery': typeof GalleryRoute
   '/recognition': typeof RecognitionRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/collections': typeof CollectionsRoute
+  '/contact': typeof ContactRoute
   '/corporate': typeof CorporateRoute
   '/gallery': typeof GalleryRoute
   '/recognition': typeof RecognitionRoute
@@ -59,19 +67,33 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/collections': typeof CollectionsRoute
+  '/contact': typeof ContactRoute
   '/corporate': typeof CorporateRoute
   '/gallery': typeof GalleryRoute
   '/recognition': typeof RecognitionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/collections' | '/corporate' | '/gallery' | '/recognition'
+  fullPaths:
+    | '/'
+    | '/collections'
+    | '/contact'
+    | '/corporate'
+    | '/gallery'
+    | '/recognition'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/collections' | '/corporate' | '/gallery' | '/recognition'
+  to:
+    | '/'
+    | '/collections'
+    | '/contact'
+    | '/corporate'
+    | '/gallery'
+    | '/recognition'
   id:
     | '__root__'
     | '/'
     | '/collections'
+    | '/contact'
     | '/corporate'
     | '/gallery'
     | '/recognition'
@@ -80,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CollectionsRoute: typeof CollectionsRoute
+  ContactRoute: typeof ContactRoute
   CorporateRoute: typeof CorporateRoute
   GalleryRoute: typeof GalleryRoute
   RecognitionRoute: typeof RecognitionRoute
@@ -108,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CorporateRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/collections': {
       id: '/collections'
       path: '/collections'
@@ -128,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CollectionsRoute: CollectionsRoute,
+  ContactRoute: ContactRoute,
   CorporateRoute: CorporateRoute,
   GalleryRoute: GalleryRoute,
   RecognitionRoute: RecognitionRoute,
