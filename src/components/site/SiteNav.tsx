@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { LOGO_URL, NAV_LINKS, WA_LINK } from "@/lib/site-data";
+import { LOGO_FULL_URL, NAV_LINKS, WA_LINK } from "@/lib/site-data";
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
@@ -23,11 +23,8 @@ export function SiteNav() {
               : "border-transparent bg-transparent"
           }`}
         >
-          <Link to="/" className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="Pearl Gifts" className="h-10 w-10 rounded-full object-contain bg-white p-1 ring-1 ring-[var(--plum)]/15" />
-            <span className="font-display text-xl tracking-wide text-[var(--plum-deep)]">
-              Pearl <span className="text-gradient-gold font-semibold">Gifts</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-12 object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-9 md:flex">

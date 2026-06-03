@@ -1,4 +1,5 @@
 export const LOGO_URL = "https://www.image2url.com/r2/default/images/1780426424020-9dc0dbca-dabf-460a-af11-79ccaef84e76.png";
+export const LOGO_FULL_URL = "https://www.image2url.com/r2/default/images/1780426424020-9dc0dbca-dabf-460a-af11-79ccaef84e76.png";
 
 export const IMG = {
   award: "https://www.image2url.com/r2/default/images/1780426693316-16772d41-f13b-4baa-83e4-02cfe3991905.jpg",

@@ -48,7 +48,7 @@ function CorporatePage() {
                 <img src={IMG.product1} alt="Corporate gifting flat lay" className="absolute inset-0 h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[var(--plum-deep)]/40 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 glass rounded-2xl px-5 py-4">
-                  <p className="text-xs uppercase tracking-widest text-[var(--ink)]/60">Minimum order</p>
+                  <p className="text-xs uppercase tracking-widest text-[var(--ink)]">Minimum order</p>
                   <p className="font-display text-xl text-[var(--plum-deep)]">25 units · Bespoke</p>
                 </div>
               </div>

@@ -63,7 +63,7 @@ function Hero() {
             ].map(([k, v]) => (
               <div key={v}>
                 <dt className="font-display text-3xl text-[var(--plum-deep)]">{k}</dt>
-                <dd className="mt-1 text-xs uppercase tracking-widest text-[var(--ink)]/55">{v}</dd>
+                <dd className="mt-1 text-xs uppercase tracking-widest text-[var(--ink)]/75">{v}</dd>
               </div>
             ))}
           </dl>
@@ -95,7 +95,7 @@ function BrandStrip() {
   return (
     <section className="border-y border-[var(--plum)]/10 bg-white/60 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-5">
-        <p className="text-center text-xs uppercase tracking-[0.3em] text-[var(--ink)]/65">
+        <p className="text-center text-xs uppercase tracking-[0.3em] text-[var(--ink)]/75">
           Trusted by organizations across the continent
         </p>
         <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">

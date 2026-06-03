@@ -94,7 +94,7 @@ function CollectionsPage() {
                   <h3 className="font-display text-lg text-[var(--plum-deep)]">{f.name}</h3>
                   <p className="whitespace-nowrap text-sm text-[var(--ink)]">{f.price}</p>
                 </div>
-                <p className="mt-1 text-xs uppercase tracking-widest text-[var(--ink)]/60">Hand-finished · Customizable</p>
+                <p className="mt-1 text-xs uppercase tracking-widest text-[var(--ink)]">Hand-finished · Customizable</p>
               </article>
             ))}
           </div>

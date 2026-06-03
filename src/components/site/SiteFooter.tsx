@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { LOGO_URL, NAV_LINKS } from "@/lib/site-data";
+import { LOGO_FULL_URL, NAV_LINKS } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
@@ -8,10 +8,7 @@ export function SiteFooter() {
         <div className="grid gap-14 md:gap-16 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={LOGO_URL} alt="Pearl Gifts" className="h-12 w-12 rounded-full bg-white object-contain p-1.5" />
-              <span className="font-display text-2xl text-white">
-                Pearl <span className="text-gradient-gold">Gifts</span>
-              </span>
+              <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-14 object-contain" />
             </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-white/90">
               A Lagos-based luxury gifting atelier crafting bespoke experiences for organizations that give with intention.
