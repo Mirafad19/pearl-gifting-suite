@@ -17,14 +17,14 @@ export function SiteNav() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
       <div className="mx-auto max-w-7xl px-5">
         <div
-          className={`flex items-center justify-between rounded-2xl border px-5 py-2.5 transition-all ${
+          className={`flex items-center justify-between rounded-2xl border px-5 py-3 transition-all ${
             scrolled
               ? "glass border-white/40 shadow-soft"
               : "border-transparent bg-transparent"
           }`}
         >
           <Link to="/" className="flex items-center gap-2">
-            <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-12 object-contain" />
+            <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-16 object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-9 md:flex">

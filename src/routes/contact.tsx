@@ -26,7 +26,7 @@ function ContactPage() {
         description="Reach our curators directly. Most briefs receive a thoughtful response within two working hours."
       />
 
-      <section className="pb-28 md:pb-40">
+      <section className="pb-20 md:pb-28">
         <div className="mx-auto max-w-7xl px-5">
           <div className="relative overflow-hidden rounded-[2.5rem] shadow-luxe">
             <div className="absolute inset-0 -z-10 gradient-plum" />

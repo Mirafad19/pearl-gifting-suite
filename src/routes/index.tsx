@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-24 md:pt-44 md:pb-32">
+    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full bg-[var(--plum)]/15 blur-3xl" />
         <div className="absolute top-40 -right-40 h-[520px] w-[520px] rounded-full bg-[var(--gold)]/20 blur-3xl" />
@@ -78,10 +78,10 @@ function Hero() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--plum-deep)]/35 via-transparent to-transparent" />
           </div>
-          <div className="absolute -bottom-6 -left-6 hidden w-44 overflow-hidden rounded-2xl border-4 border-white shadow-soft md:block">
+          <div className="absolute -bottom-6 -left-6 hidden w-44 overflow-hidden rounded-2xl shadow-soft md:block">
             <img src={IMG.product3} alt="Detail of engraved keepsake" className="h-44 w-full object-cover" />
           </div>
-          <div className="absolute -right-4 -top-4 hidden w-36 overflow-hidden rounded-2xl border-4 border-white shadow-soft md:block">
+          <div className="absolute -right-4 -top-4 hidden w-36 overflow-hidden rounded-2xl shadow-soft md:block">
             <img src={IMG.product5} alt="Bespoke presentation detail" className="h-36 w-full object-cover" />
           </div>
         </div>
@@ -93,7 +93,7 @@ function Hero() {
 function BrandStrip() {
   const brands = ["DANGOTE", "ACCESS", "MTN", "GTCO", "SHELL", "UNILEVER", "FLUTTERWAVE", "STANBIC"];
   return (
-    <section className="border-y border-[var(--plum)]/10 bg-white/60 py-16 md:py-20">
+    <section className="border-y border-[var(--plum)]/10 bg-white/60 py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-5">
         <p className="text-center text-xs uppercase tracking-[0.3em] text-[var(--ink)]/75">
           Trusted by organizations across the continent
@@ -122,7 +122,7 @@ const PREVIEW_COLLECTIONS = [
 
 function CollectionsPreview() {
   return (
-    <section className="py-28 md:py-40">
+    <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
@@ -165,7 +165,7 @@ function CollectionsPreview() {
 
 function AtelierReel() {
   return (
-    <section className="bg-[var(--cream)] py-28 md:py-40">
+    <section className="bg-[var(--cream)] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[9/12] overflow-hidden rounded-[2rem] shadow-luxe">
@@ -213,7 +213,7 @@ function AtelierReel() {
 
 function RecognitionTeaser() {
   return (
-    <section className="py-28 md:py-40">
+    <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5">
         <div className="overflow-hidden rounded-[2.5rem] gradient-plum text-white shadow-luxe">
           <div className="grid lg:grid-cols-2">
@@ -245,7 +245,7 @@ function RecognitionTeaser() {
 
 function TestimonialSnippet() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-5">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">What Our Clients Say</span>

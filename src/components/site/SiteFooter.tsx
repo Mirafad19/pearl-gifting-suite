@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="grid gap-14 md:gap-16 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-14 object-contain" />
+              <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-20 object-contain" />
             </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-white/90">
               A Lagos-based luxury gifting atelier crafting bespoke experiences for organizations that give with intention.

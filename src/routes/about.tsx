@@ -50,7 +50,7 @@ function AboutPage() {
         description="A decade of thoughtful craftsmanship. One mission: to elevate how organizations give."
       />
 
-      <section className="py-28 md:py-40">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-luxe">
@@ -92,7 +92,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--cream)] py-28 md:py-40">
+      <section className="bg-[var(--cream)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-4xl md:text-5xl text-[var(--plum-deep)] text-balance">
@@ -164,7 +164,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-28 md:py-40">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-5 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-[var(--plum-deep)] text-balance">
             Let's craft something meaningful together.

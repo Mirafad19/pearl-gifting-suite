@@ -42,7 +42,7 @@ function CollectionsPage() {
         description="Every Pearl Gifts collection is designed in-house and finished by hand. Choose a starting point — every piece can be tailored to your brand, recipient and budget."
       />
 
-      <section className="pb-20 md:pb-24">
+      <section className="pb-16 md:pb-20">
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {CATEGORIES.map((c, i) => (
@@ -70,7 +70,7 @@ function CollectionsPage() {
         </div>
       </section>
 
-      <section className="py-28 md:py-40 bg-[var(--cream)]">
+      <section className="py-20 md:py-28 bg-[var(--cream)]">
         <div className="mx-auto max-w-7xl px-5">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
@@ -90,18 +90,17 @@ function CollectionsPage() {
                   <img src={f.img} alt={f.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-[1.06]" />
                   <span className="absolute top-4 left-4 rounded-full glass px-3 py-1 text-[10px] uppercase tracking-widest text-[var(--plum-deep)]">{f.tag}</span>
                 </div>
-                <div className="mt-5 flex items-start justify-between gap-4">
+                <div className="mt-5">
                   <h3 className="font-display text-lg text-[var(--plum-deep)]">{f.name}</h3>
-                  <p className="whitespace-nowrap text-sm text-[var(--ink)]">{f.price}</p>
                 </div>
-                <p className="mt-1 text-xs uppercase tracking-widest text-[var(--ink)]">Hand-finished · Customizable</p>
+                <p className="mt-2 text-xs uppercase tracking-widest text-[var(--ink)]">Hand-finished · Customizable</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-28 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-5 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-[var(--plum-deep)] text-balance">
             Don't see your occasion?

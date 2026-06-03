@@ -178,7 +178,7 @@ function FAQPage() {
         description="Answers to common questions about our process, customization, delivery, and corporate programs. Can't find what you're looking for?"
       />
 
-      <section className="py-28 md:py-40">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-5">
           <FAQAccordion />
 

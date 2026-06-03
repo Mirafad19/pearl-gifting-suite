@@ -40,7 +40,7 @@ function CorporatePage() {
         description="We partner with HR, marketing and executive teams to design and run gifting programs that strengthen every relationship behind your brand."
       />
 
-      <section className="pb-28 md:pb-32">
+      <section className="pb-20 md:pb-24">
         <div className="mx-auto max-w-7xl px-5">
           <div className="overflow-hidden rounded-[2.5rem] bg-[var(--cream)] shadow-soft">
             <div className="grid lg:grid-cols-2">
@@ -86,7 +86,7 @@ function CorporatePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-28 md:py-40">
+      <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 -z-10 gradient-plum" />
         <div className="absolute inset-0 -z-10 opacity-[0.06] [background-image:radial-gradient(circle_at_2px_2px,white_1.5px,transparent_0)] [background-size:28px_28px]" />
         <div className="mx-auto max-w-7xl px-5 text-white">
@@ -115,7 +115,7 @@ function CorporatePage() {
         </div>
       </section>
 
-      <section className="py-28 md:py-40">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">How It Works</span>

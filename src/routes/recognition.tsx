@@ -38,7 +38,7 @@ function RecognitionPage() {
         description="We do this work for the relationships behind every gift. The recognition that follows is a kind reflection of the care our clients have trusted us with."
       />
 
-      <section className="pb-28 md:pb-32">
+      <section className="pb-20 md:pb-24">
         <div className="mx-auto max-w-7xl px-5">
           <div className="overflow-hidden rounded-[2.5rem] bg-[var(--cream)] shadow-luxe">
             <div className="grid lg:grid-cols-[1.1fr_1fr]">
@@ -64,7 +64,7 @@ function RecognitionPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--cream)] py-28 md:py-40">
+      <section className="bg-[var(--cream)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Milestones</span>
@@ -82,7 +82,7 @@ function RecognitionPage() {
         </div>
       </section>
 
-      <section className="py-28 md:py-40">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Client Voices</span>
