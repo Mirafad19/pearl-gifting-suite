@@ -19,12 +19,12 @@ export function SiteNav() {
         <div
           className={`flex items-center justify-between rounded-2xl border px-5 py-3 transition-all ${
             scrolled
-              ? "glass border-white/40 shadow-soft"
-              : "border-transparent bg-transparent"
+              ? "glass shadow-soft"
+              : "bg-transparent"
           }`}
         >
           <Link to="/" className="flex items-center gap-2">
-            <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-16 object-contain" />
+            <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-20 object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-9 md:flex">
@@ -41,14 +41,12 @@ export function SiteNav() {
             ))}
           </nav>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-full gradient-plum px-5 py-2.5 text-sm text-white shadow-soft hover:opacity-95"
           >
-            <MessageCircle className="h-4 w-4" /> Request Quote
-          </a>
+            <MessageCircle className="h-4 w-4" /> Start a Brief
+          </Link>
 
           <button
             onClick={() => setOpen((v) => !v)}
