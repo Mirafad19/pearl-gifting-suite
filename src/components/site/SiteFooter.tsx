@@ -42,8 +42,17 @@ export function SiteFooter() {
           <p>Crafted in Lagos · Delivered with care.</p>
         </div>
       </div>
-      <div className="border-t border-white/10 bg-[var(--plum)]/50 py-5 text-center text-xs text-white/60">
-        <p>Premium gifting experiences | Handcrafted with intention | Delivered across Nigeria</p>
+      <div className="border-t border-white/10 bg-[var(--plum)]/50 py-6">
+        <div className="mx-auto max-w-7xl px-5">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-white/70">
+            <p>Premium gifting experiences | Handcrafted with intention | Delivered across Nigeria</p>
+          </div>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-white/60">
+            <Link to="/privacy" className="transition hover:text-white">Privacy Policy</Link>
+            <span className="text-white/40">•</span>
+            <Link to="/terms" className="transition hover:text-white">Terms of Service</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

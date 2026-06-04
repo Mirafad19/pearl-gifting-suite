@@ -15,11 +15,14 @@ export function SiteNav() {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
+      {scrolled && (
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-[var(--gold)] via-[var(--gold)]/50 to-transparent rounded-b-full opacity-100 transition-opacity duration-300"></div>
+      )}
       <div className="mx-auto max-w-7xl px-5">
         <div
-          className={`flex items-center justify-between rounded-2xl border px-5 py-3 transition-all ${
+          className={`flex items-center justify-between px-5 py-3 transition-all ${
             scrolled
-              ? "glass shadow-soft"
+              ? "bg-white shadow-soft border-b border-[var(--plum)]/10"
               : "bg-transparent"
           }`}
         >

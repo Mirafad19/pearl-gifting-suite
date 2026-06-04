@@ -4,41 +4,53 @@ export function PageLoader() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const handleStart = () => setIsLoading(true);
-    const handleEnd = () => {
-      setTimeout(() => setIsLoading(false), 300);
-    };
+    let loadingTimeout: NodeJS.Timeout;
 
-    // Listen for navigation events
-    window.addEventListener("beforeunload", handleStart);
-    window.addEventListener("load", handleEnd);
-
-    // Also catch link clicks for client-side navigation
-    const handleClick = (e: MouseEvent) => {
+    // Handle link clicks
+    const handleLinkClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest("a");
-      if (target && target.href && !target.target) {
+
+      // Skip if external, has target="_blank", or is same page
+      if (!target || target.target || target.href === window.location.href) {
+        return;
+      }
+
+      // Check if it's an internal link
+      const href = target.getAttribute("href");
+      if (href && !href.startsWith("http") && !href.startsWith("mailto") && !href.startsWith("tel")) {
         setIsLoading(true);
-        setTimeout(() => setIsLoading(false), 300);
+        loadingTimeout = setTimeout(() => setIsLoading(false), 800);
       }
     };
 
-    document.addEventListener("click", handleClick);
+    // Handle button form submissions
+    const handleFormSubmit = (e: SubmitEvent) => {
+      const form = (e.target as HTMLFormElement);
+      // Only show loader if form submits to internal page
+      if (!form.action || form.action.includes(window.location.hostname)) {
+        setIsLoading(true);
+        loadingTimeout = setTimeout(() => setIsLoading(false), 800);
+      }
+    };
+
+    document.addEventListener("click", handleLinkClick as EventListener);
+    document.addEventListener("submit", handleFormSubmit as EventListener);
 
     return () => {
-      window.removeEventListener("beforeunload", handleStart);
-      window.removeEventListener("load", handleEnd);
-      document.removeEventListener("click", handleClick);
+      document.removeEventListener("click", handleLinkClick as EventListener);
+      document.removeEventListener("submit", handleFormSubmit as EventListener);
+      clearTimeout(loadingTimeout);
     };
   }, []);
 
   if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] bg-white/80 backdrop-blur-sm flex items-center justify-center">
+    <div className="fixed inset-0 z-[9999] bg-white/85 backdrop-blur-xs flex items-center justify-center pointer-events-auto">
       <div className="flex flex-col items-center gap-4">
-        <div className="relative h-12 w-12">
-          <div className="absolute inset-0 rounded-full border-4 border-[var(--plum)]/20"></div>
-          <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-[var(--plum)] animate-spin"></div>
+        <div className="relative h-14 w-14">
+          <div className="absolute inset-0 rounded-full border-4 border-[var(--plum)]/15"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-[var(--plum)] border-r-[var(--plum)]/60 animate-spin"></div>
         </div>
         <p className="text-sm font-display text-[var(--plum-deep)] tracking-wide">Loading...</p>
       </div>
