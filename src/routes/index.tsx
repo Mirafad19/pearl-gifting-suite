@@ -275,9 +275,13 @@ function TestimonialSnippet() {
             </figure>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
           <Link to="/recognition" className="inline-flex items-center gap-2 text-sm text-[var(--plum)] hover:text-[var(--plum-deep)]">
             See more recognition <ArrowRight className="h-4 w-4" />
+          </Link>
+          <span className="text-[var(--ink)]/30">•</span>
+          <Link to="/submit-review" className="inline-flex items-center gap-2 text-sm text-[var(--plum)] hover:text-[var(--plum-deep)] font-medium">
+            Submit your review <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

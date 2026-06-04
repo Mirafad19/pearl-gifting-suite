@@ -18,11 +18,17 @@ export function SiteNav() {
       {scrolled && (
         <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-[var(--gold)] via-[var(--gold)]/50 to-transparent rounded-b-full opacity-100 transition-opacity duration-300"></div>
       )}
+      <style>{`
+        header {
+          border-radius: 0 0 24px 24px;
+          overflow: hidden;
+        }
+      `}</style>
       <div className="mx-auto max-w-7xl px-5">
         <div
           className={`flex items-center justify-between px-5 py-3 transition-all ${
             scrolled
-              ? "bg-white shadow-soft border-b border-[var(--plum)]/10"
+              ? "bg-white shadow-soft"
               : "bg-transparent"
           }`}
         >
