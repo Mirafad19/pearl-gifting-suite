@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { LOGO_URL, NAV_LINKS, WA_LINK } from "@/lib/site-data";
+import { LOGO_FULL_URL, NAV_LINKS, WA_LINK } from "@/lib/site-data";
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
@@ -15,19 +15,25 @@ export function SiteNav() {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
+      {scrolled && (
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-[var(--gold)] via-[var(--gold)]/50 to-transparent rounded-b-full opacity-100 transition-opacity duration-300"></div>
+      )}
+      <style>{`
+        header {
+          border-radius: 0 0 24px 24px;
+          overflow: hidden;
+        }
+      `}</style>
       <div className="mx-auto max-w-7xl px-5">
         <div
-          className={`flex items-center justify-between rounded-2xl border px-5 py-2.5 transition-all ${
+          className={`flex items-center justify-between px-5 py-3 transition-all ${
             scrolled
-              ? "glass border-white/40 shadow-soft"
-              : "border-transparent bg-transparent"
+              ? "bg-white shadow-soft"
+              : "bg-transparent"
           }`}
         >
-          <Link to="/" className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="Pearl Gifts" className="h-10 w-10 rounded-full object-contain bg-white p-1 ring-1 ring-[var(--plum)]/15" />
-            <span className="font-display text-xl tracking-wide text-[var(--plum-deep)]">
-              Pearl <span className="text-gradient-gold font-semibold">Gifts</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={LOGO_FULL_URL} alt="Pearl Gifts" className="h-20 object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-9 md:flex">
@@ -44,14 +50,12 @@ export function SiteNav() {
             ))}
           </nav>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-full gradient-plum px-5 py-2.5 text-sm text-white shadow-soft hover:opacity-95"
           >
-            <MessageCircle className="h-4 w-4" /> Request Quote
-          </a>
+            <MessageCircle className="h-4 w-4" /> Start a Brief
+          </Link>
 
           <button
             onClick={() => setOpen((v) => !v)}

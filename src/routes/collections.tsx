@@ -42,7 +42,7 @@ function CollectionsPage() {
         description="Every Pearl Gifts collection is designed in-house and finished by hand. Choose a starting point — every piece can be tailored to your brand, recipient and budget."
       />
 
-      <section className="pb-16">
+      <section className="pb-16 md:pb-20">
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {CATEGORIES.map((c, i) => (
@@ -58,7 +58,7 @@ function CollectionsPage() {
                   </span>
                   <div className="absolute inset-x-5 bottom-5 text-white">
                     <h2 className="font-display text-2xl">{c.name}</h2>
-                    <p className="mt-1.5 text-sm text-white/80 line-clamp-2">{c.desc}</p>
+                    <p className="mt-1.5 text-sm text-white/90 line-clamp-2">{c.desc}</p>
                     <a href={WA_LINK} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-[var(--gold)] text-sm">
                       Enquire <ArrowRight className="h-4 w-4" />
                     </a>
@@ -70,7 +70,7 @@ function CollectionsPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-28 bg-[var(--cream)]">
+      <section className="py-20 md:py-28 bg-[var(--cream)]">
         <div className="mx-auto max-w-7xl px-5">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
@@ -83,30 +83,29 @@ function CollectionsPage() {
               Commission a piece <ArrowRight className="h-4 w-4" />
             </a>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {FEATURED.map((f) => (
               <article key={f.name} className="group">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[var(--secondary)]">
                   <img src={f.img} alt={f.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-[1.06]" />
                   <span className="absolute top-4 left-4 rounded-full glass px-3 py-1 text-[10px] uppercase tracking-widest text-[var(--plum-deep)]">{f.tag}</span>
                 </div>
-                <div className="mt-5 flex items-start justify-between gap-4">
+                <div className="mt-5">
                   <h3 className="font-display text-lg text-[var(--plum-deep)]">{f.name}</h3>
-                  <p className="whitespace-nowrap text-sm text-[var(--ink)]/70">{f.price}</p>
                 </div>
-                <p className="mt-1 text-xs uppercase tracking-widest text-[var(--ink)]/45">Hand-finished · Customizable</p>
+                <p className="mt-2 text-xs uppercase tracking-widest text-[var(--ink)]">Hand-finished · Customizable</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-5 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-[var(--plum-deep)] text-balance">
             Don't see your occasion?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-[var(--ink)]/70">
+          <p className="mx-auto mt-4 max-w-xl text-[var(--ink)]">
             Every Pearl Gifts piece can be reimagined. Brief us on your moment — we'll come back with a moodboard within 72 hours.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
