@@ -3,8 +3,8 @@ import { LOGO_FULL_URL, NAV_LINKS } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[var(--plum-deep)] py-18 md:py-24 text-white/85">
-      <div className="mx-auto max-w-7xl px-5">
+    <footer className="bg-[var(--plum-deep)] text-white/85">
+      <div className="mx-auto max-w-7xl px-5 py-18 md:py-24">
         <div className="grid gap-14 md:gap-16 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
@@ -41,6 +41,9 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Pearl Gifts Atelier. All rights reserved.</p>
           <p>Crafted in Lagos · Delivered with care.</p>
         </div>
+      </div>
+      <div className="border-t border-white/10 bg-[var(--plum)]/50 py-5 text-center text-xs text-white/60">
+        <p>Premium gifting experiences | Handcrafted with intention | Delivered across Nigeria</p>
       </div>
     </footer>
   );

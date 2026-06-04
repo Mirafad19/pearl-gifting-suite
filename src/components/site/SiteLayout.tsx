@@ -2,10 +2,12 @@ import type { ReactNode } from "react";
 import { SiteNav } from "./SiteNav";
 import { SiteFooter } from "./SiteFooter";
 import { FloatingWhatsApp } from "./FloatingWhatsApp";
+import { PageLoader } from "./PageLoader";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <PageLoader />
       <SiteNav />
       {children}
       <SiteFooter />

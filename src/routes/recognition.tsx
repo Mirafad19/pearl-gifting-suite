@@ -42,15 +42,15 @@ function RecognitionPage() {
         <div className="mx-auto max-w-7xl px-5">
           <div className="overflow-hidden rounded-[2.5rem] bg-[var(--cream)] shadow-luxe">
             <div className="grid lg:grid-cols-[1.1fr_1fr]">
-              <div className="relative min-h-[420px]">
-                <img src={IMG.award} alt="Pearl Gifts receiving an industry award" className="absolute inset-0 h-full w-full object-cover" />
+              <div className="relative min-h-[520px] lg:min-h-[580px]">
+                <img src={IMG.award} alt="Pearl Gifts team receiving Outstanding Business Brand of the Year award" className="absolute inset-0 h-full w-full object-cover" />
               </div>
               <div className="p-10 md:p-16">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[var(--plum)]/8 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--plum-deep)]">
                   <Award className="h-3.5 w-3.5 text-[var(--gold)]" /> 2024 Recognition
                 </div>
                 <h2 className="mt-5 font-display text-3xl md:text-4xl text-[var(--plum-deep)] text-balance">
-                  Luxury Gifting House of the Year
+                  Outstanding Business Brand of the Year
                 </h2>
                 <p className="mt-5 text-[var(--ink)] leading-relaxed">
                   We were honored to receive this recognition for craft, consistency and the care with which we serve the teams behind each gift. It belongs as much to our artisans and clients as it does to us.
